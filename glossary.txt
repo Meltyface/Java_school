@@ -1,0 +1,22 @@
+Class: A blueprint, defining what an object should do, without executing the commands themselves. Classes define what properties (fields) and actions (methods) an object can have.
+
+Object: An instance of a class that can act on the commands within the class.
+
+Public: The most accessible type; allows other functions, variables, etc. to access values or commands herein. 
+
+Private: Only available for functions, variables, etc. that have permission to access.
+
+Protected: No other object may access this.
+
+[Blank]: Unclear
+
+Static: Definition belongs to class, not object instance. Main method is always static.
+
+Void: Object has no return value.
+
+Commit: "Super save"; allows user to access all previous versions of the saved repository. 
+
+Abstract class: "Cookie cutter shape" for other classes. 
+
+Extends: "is a"
+
