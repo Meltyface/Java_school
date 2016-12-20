@@ -1,0 +1,7 @@
+The term 'instance variable' is another name for non-static fields.
+The term 'class variable' is another name for a static field.
+A local variable stores a temporary state; it is declared inside a method.
+A variable declared within the opening and closing parenthesis of a method signature is called a parameter.
+The eight primitive data types are: byte, short, int, long, float, double, boolean, char.
+Character strings are represented by the class String.
+An array is a container object that holds a fixed number of values of a single type.

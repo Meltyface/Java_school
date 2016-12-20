@@ -20,3 +20,12 @@ Abstract class: "Cookie cutter shape" for other classes.
 
 Extends: "is a"
 
+TDD: Test-Driven Development
+
+Top-Down: Building a program by examining the desired outputs, and building backward; start with a method to achieve the output, and build a system around it.
+
+Bottom-Up: Building a program by considering how it could achieve the desired outputs, but starting with the broadest scope of the system, and building toward the final result.
+
+Ternary Operator: Boolean operation in the format <x> ? <y> : <z> where <x> is an if statement, which defaults to <y> if true, and <z> if false.
+
+

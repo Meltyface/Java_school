@@ -1,0 +1,6 @@
+The most basic control flow statement supported by the Java programming langauge is the if-then statement.
+The else statement allows for any number of possible execution paths.
+The for statement is similar to the while statement, but evaluates its expression at the start of the loop.
+Infinite for loop: for ( ; ; ) {}
+Infinite while loop: while (true) {}
+

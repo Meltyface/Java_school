@@ -1,0 +1,4 @@
+a) x is a class variable
+b) y is an instance variable
+c) class variable value will be the last value to which it was set. Instance variables can have many values.
+
