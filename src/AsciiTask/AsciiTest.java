@@ -13,7 +13,7 @@ public class AsciiTest {
 	@Test
 	public void printAsciiUnitaryTest() {
 		Object asciiOne = target.convertIntToAscii(1);
-		assertEquals("   \n  |\n  |\n", asciiOne);
+		assertEquals("   \n  |\n  |", asciiOne);
 		System.out.println(asciiOne);
 	}
 	
@@ -25,9 +25,22 @@ public class AsciiTest {
 	}
 	
 	@Test
-	public void printZeroToTenTest() {
+	public void printZeroToNineTest() {
 		for (int i = 0; i < 10; i++) {
 			System.out.println(target.convertIntToAscii(i));	
 		}
 	}
+	
+	@Test
+	public void printAsciiDodecaTest() {
+		Object asciiTwelve = target.convertIntToAscii(12);
+		assertEquals(" _ \n _|\n|_ ", asciiTwelve);
+		System.out.println(asciiTwelve);
+	}
+	
+	@Test
+	public void printAsciiNegaTest() {
+		assertEquals("      \n _   |\n     |", target.convertIntToAscii(-1));
+	}
+	
 }
