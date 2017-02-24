@@ -9,7 +9,7 @@ import org.junit.Assert;
 
 public class FileReaderTest {
 	FileReader target;
-	FileWriter writer = mock(FileWriter.class);
+	NewFileCreator writer = mock(NewFileCreator.class);
 	
 	@Before
 	public void setup() {

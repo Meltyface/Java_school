@@ -5,9 +5,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class FileReader {
-	private FileWriter writer;
+	private NewFileCreator writer;
 	
-	public FileReader(FileWriter writer) {
+	public FileReader(NewFileCreator writer) {
 		this.writer = writer;
 	}
 	
