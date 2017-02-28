@@ -13,9 +13,9 @@ public class FileReader {
 	
 	private static final String fileNotFoundMessage = "Incorrect path input. Run again with correct file path.";
 
-	public void readFile(String path) {		
+	public void readFile(String path, String fileName) {		
 		String fileData = validate(path);
-		writer.write(fileData);
+		writer.create(fileName, fileData);
 	}
 
 	private String validate(String path) {
