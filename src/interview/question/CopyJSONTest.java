@@ -26,7 +26,7 @@ public class CopyJSONTest {
 	@Test
 	public void invalidPathTest() {
 		try {
-			Main.main(new String[] { "dfgdf", "jqaxc" });
+			Main.main(new String[] { "copy", "dfgdf", "jqaxc" });
 		} catch (RuntimeException e) {
 			assertEquals("Incorrect path input. Run again with correct file path.", e.getMessage());
 		}
@@ -34,7 +34,7 @@ public class CopyJSONTest {
 
 	private void assertCopied(String testFilePath) throws IOException {
 		String outputPath = "output_folder/copyAndRelocateOutput.txt";
-		Main.main(new String[] { testFilePath, outputPath });
+		Main.main(new String[] { "copy", testFilePath, outputPath });
 		assertTrue(compareFiles(testFilePath, outputPath));
 	}
 
