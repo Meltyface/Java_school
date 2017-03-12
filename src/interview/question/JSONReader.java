@@ -19,7 +19,13 @@ public class JSONReader {
 				return (String) value;
 			} else if (value instanceof JSONObject) {
 				return value.toString();
-			} 
+			} else if (value instanceof Boolean) {
+				return value.toString();
+			} else if (value instanceof Integer) {
+				return value.toString();
+			} else if (value instanceof String[]) {
+				return value.toString();
+			}
 			// Complete else if statements for Bool, number, Array objects
 			// 
 			

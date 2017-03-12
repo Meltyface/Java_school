@@ -25,4 +25,15 @@ public class GetJSONTest {
 		assertEquals("{\"streetAddress\":\"21 2nd Street\",\"city\":\"New York\",\"postalCode\":\"10021-3100\",\"state\":\"NY\"}", actual);
 	}
 	
+	@Test
+	public void findNumbertest() {
+		String actual = target.delegateArgs(new String[] {"get", "age"});
+		assertEquals("25", actual);
+	}
+	
+	@Test
+	public void findBooltest() {
+		String actual = target.delegateArgs(new String[] {"get", "isAlive"});
+		assertEquals("true", actual);
+	}
 }
