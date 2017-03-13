@@ -15,25 +15,25 @@ public class GetJSONTest {
 	
 	@Test
 	public void findNametest() {
-		String actual = target.delegateArgs(new String[] {"get", "firstName"});
-		assertEquals("John", actual);
+		findX("firstName", "John");
 	}
 	
 	@Test
 	public void findAddresstest() {
-		String actual = target.delegateArgs(new String[] {"get", "address"});
-		assertEquals("{\"streetAddress\":\"21 2nd Street\",\"city\":\"New York\",\"postalCode\":\"10021-3100\",\"state\":\"NY\"}", actual);
+		findX("address", "{\"streetAddress\":\"21 2nd Street\",\"city\":\"New York\",\"postalCode\":\"10021-3100\",\"state\":\"NY\"}");
 	}
 	
 	@Test
 	public void findNumbertest() {
-		String actual = target.delegateArgs(new String[] {"get", "age"});
-		assertEquals("25", actual);
+		findX("age", "25");
 	}
 	
 	@Test
 	public void findBooltest() {
-		String actual = target.delegateArgs(new String[] {"get", "isAlive"});
-		assertEquals("true", actual);
+		findX("isAlive", "true");
+	}
+
+	private void findX(String key, String expected) {
+		assertEquals(expected, target.delegateArgs(new String[] {"get", key}));
 	}
 }

@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class FileWriterTest {
 	NewFileCreator target = new NewFileCreator();
-	FileReader testFile = new FileReader(target);
+	FileCopier testFile = new FileCopier(target);
 	private static final String TEXT_FOLDER = "text_files_for_testing/";
 
 	@Test

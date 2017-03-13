@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class FileReader {
+public class FileCopier {
 	private NewFileCreator writer;
 	
-	public FileReader(NewFileCreator writer) {
+	public FileCopier(NewFileCreator writer) {
 		this.writer = writer;
 	}
 	

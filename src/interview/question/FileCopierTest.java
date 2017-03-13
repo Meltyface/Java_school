@@ -7,13 +7,13 @@ import static org.mockito.Mockito.*;
 
 import org.junit.Assert;
 
-public class FileReaderTest {
-	FileReader target;
+public class FileCopierTest {
+	FileCopier target;
 	NewFileCreator writer = mock(NewFileCreator.class);
 	
 	@Before
 	public void setup() {
-		this.target = new FileReader(writer);
+		this.target = new FileCopier(writer);
 	}
 	
 	@Test
