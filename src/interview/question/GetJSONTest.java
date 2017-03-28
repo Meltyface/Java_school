@@ -6,13 +6,22 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class GetJSONTest {
+	
 	private static final String TEXT_FOLDER = "text_files_for_testing/";
 	
 	ApplicationManager target = new ApplicationManager();
 	
+	@Before
+	public void setUp() {
+		copyExampleFile(0);
+		copyExampleFile(1);
+		copyExampleFile(2);
+	}
+		
 	@Test
 	public void findNametest() {
 		findX("firstName", "John");
@@ -32,8 +41,13 @@ public class GetJSONTest {
 	public void findBooltest() {
 		findX("isAlive", "true");
 	}
-
+	
 	private void findX(String key, String expected) {
-		assertEquals(expected, target.delegateArgs(new String[] {"get", key}));
+		assertEquals(expected, target.delegateArgs(new String[] {"get", key, "--id", "example0"}));
 	}
+	
+	private void copyExampleFile(int i) {
+		target.delegateArgs(new String[] {"copy", "text_files_for_testing/example" + i + ".json"});
+	}
+	
 }

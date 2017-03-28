@@ -19,8 +19,5 @@ public class NewFileCreator {
 		}
 	}
 
-	public void write(String any) {
-
-	}
 
 }

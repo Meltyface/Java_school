@@ -3,6 +3,8 @@ package interview.question;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class FileCopier {
 	private NewFileCreator writer;
@@ -11,11 +13,15 @@ public class FileCopier {
 		this.writer = writer;
 	}
 	
+	private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd--HH-mm");
+	
 	private static final String fileNotFoundMessage = "Incorrect path input. Run again with correct file path.";
-
-	public void readFile(String path, String fileName) {		
+	
+	public void readFile(String path) {		
 		String fileData = validate(path);
-		writer.create(fileName, fileData);
+		String timePoint = LocalDateTime.now().format(FORMATTER); 
+		String newFilePath = "output_folder/" + timePoint;
+		writer.create(newFilePath, fileData);
 	}
 
 	private String validate(String path) {

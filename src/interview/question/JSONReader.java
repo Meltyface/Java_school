@@ -10,10 +10,10 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class JSONReader {
-	public String readJson(List<String> keys) {
+	public String readJson(List<String> keys, String pathToJSON) {
 
 		try {
-			return getValue(keys.get(0), "text_files_for_testing/example.json");
+			return getValue(keys.get(0), pathToJSON);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -18,17 +18,17 @@ public class FileCopierTest {
 	
 	@Test
 	public void emptyStringTest() {
-		checkFileInvalidity("", "emptyFile");
+		checkFileInvalidity("");
 	}
 	
 	@Test
-	public void inputFilePathTest() {
-		checkFileInvalidity("~/Documents/repository/Java_school/nonexistentfile.txt", "testFile");
+	public void givenNonexistentPathTestInvalidity() {
+		checkFileInvalidity("~/Documents/repository/Java_school/nonexistentfile.txt");
 	}
 
-	private void checkFileInvalidity(String path, String fileName) {
+	private void checkFileInvalidity(String path) {
 		try {
-			target.readFile(path, fileName);
+			target.readFile(path);
 			Assert.fail();
 		} catch(Exception e) {
 			assertEquals("Incorrect path input. Run again with correct file path.", e.getMessage());
@@ -37,8 +37,8 @@ public class FileCopierTest {
 	
 	@Test
 	public void writeToTxtTest() {
-		target.readFile("C:/Users/User/Documents/repository/Java_school/src/Light.java", "testFile");
-		verify(writer).write(any(String.class));
-		// Verifies that the mock object 'writer' used the method 'write' with a string argument.
+		target.readFile("touch.txt");
+		verify(writer).create(any(String.class), any(String.class));
+		// Verifies that the mock object 'writer' used the method 'create' with a string argument.
 	}
 }
