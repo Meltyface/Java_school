@@ -1,18 +1,11 @@
 package interview.question;
 
-import static org.junit.Assert.*;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public class GetJSONTest {
-	
-	private static final String TEXT_FOLDER = "text_files_for_testing/";
-	
+public class GetJSONTest {	
 	ApplicationManager target = new ApplicationManager();
 	
 	@Before

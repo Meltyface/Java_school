@@ -3,17 +3,16 @@ package interview.question;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.List;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class JSONReader {
-	public String readJson(List<String> keys, String pathToJSON) {
+	public String readJson(String key, String pathToJSON) {
 
 		try {
-			return getValue(keys.get(0), pathToJSON);
+			return getValue(key, pathToJSON);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -39,8 +38,8 @@ public class JSONReader {
 			return value.toString();
 		}
 		// Complete else if statements for Bool, number, Array objects
-		// 
-		
+		//
+
 		return "";
 	}
 

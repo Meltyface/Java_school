@@ -29,7 +29,7 @@ public class FileCopier {
 			return new String(Files.readAllBytes(Paths.get(path)));			
 		} catch(IOException e) {
 			// IOException is checked exception
-			throw new RuntimeException(fileNotFoundMessage);
+			throw new RuntimeException(fileNotFoundMessage + " Was given path: " + Paths.get(path).toAbsolutePath().toString());
 		}
 	}
 	

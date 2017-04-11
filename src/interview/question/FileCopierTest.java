@@ -1,11 +1,12 @@
 package interview.question;
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Before;
-import org.junit.Test;
-import static org.mockito.Mockito.*;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Matchers.any;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
 public class FileCopierTest {
 	FileCopier target;
@@ -25,13 +26,13 @@ public class FileCopierTest {
 	public void givenNonexistentPathTestInvalidity() {
 		checkFileInvalidity("~/Documents/repository/Java_school/nonexistentfile.txt");
 	}
-
+	
 	private void checkFileInvalidity(String path) {
 		try {
 			target.readFile(path);
 			Assert.fail();
 		} catch(Exception e) {
-			assertEquals("Incorrect path input. Run again with correct file path.", e.getMessage());
+			assertTrue(e.getMessage().contains("Incorrect path input."));
 		}
 	}
 	
